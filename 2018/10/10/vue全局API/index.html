@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>VUE全局API | 个人博客</title>
+  <meta name="keywords" content>
+  <meta name="description" content="VUE全局API | 个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简历王志强，本科毕业，目前从事PHP及相关工作。工作中用到的主要技术栈有：thinkphp5、mysql、apachejquery、bootstrap、vuegit、svn 主要工作企业建站、移动端app开发、公众号开发、小程序开发">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于自己">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="个人简历王志强，本科毕业，目前从事PHP及相关工作。工作中用到的主要技术栈有：thinkphp5、mysql、apachejquery、bootstrap、vuegit、svn 主要工作企业建站、移动端app开发、公众号开发、小程序开发">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-31T00:57:59.158Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于自己">
+<meta name="twitter:description" content="个人简历王志强，本科毕业，目前从事PHP及相关工作。工作中用到的主要技术栈有：thinkphp5、mysql、apachejquery、bootstrap、vuegit、svn 主要工作企业建站、移动端app开发、公众号开发、小程序开发">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>王志强</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/qwangzhiqiang" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/e5669c3f4645" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/ax520" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="csdn" href="https://blog.csdn.net/qq_33482132" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-csdn"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/ax520" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1121821488&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(7)</small></div></li>
+    
+        
+            
+            <li><div data-rel="VUE">VUE<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="PHP扩展">PHP扩展<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="MySQL">MySQL<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="7">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="VUE "
+           href="/2018/10/14/Vuecli脚手架结构解析/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="VUE-Cli脚手架结构解析">VUE-Cli脚手架结构解析</span>
+            <span class="post-date" title="2018-10-14 18:48:38">2018/10/14</span>
+        </a>
+        
+        <a  class="PHP扩展 "
+           href="/2018/10/09/mpdf/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Mpdf的使用">Mpdf的使用</span>
+            <span class="post-date" title="2018-10-09 18:35:38">2018/10/09</span>
+        </a>
+        
+        <a  class="MySQL "
+           href="/2018/10/05/mysql指令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="MySQL基本指令">MySQL基本指令</span>
+            <span class="post-date" title="2018-10-05 18:22:30">2018/10/05</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2018/10/10/vue全局API/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="VUE全局API">VUE全局API</span>
+            <span class="post-date" title="2018-10-10 12:20:34">2018/10/10</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2018/10/08/vue指令/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="VUE基本指令">VUE基本指令</span>
+            <span class="post-date" title="2018-10-08 08:20:10">2018/10/08</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2018/10/12/vue构造器选项/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="VUE构造器选项">VUE构造器选项</span>
+            <span class="post-date" title="2018-10-12 18:28:19">2018/10/12</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2018/10/11/vue组件component的使用/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="VUE组件component使用">VUE组件component使用</span>
+            <span class="post-date" title="2018-10-11 18:35:33">2018/10/11</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-vue全局API" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">VUE全局API</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="VUE">VUE</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2018-10-10 12:20:34'>2018-10-10 12:20</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、什么是全局API？"><span class="toc-text">一、什么是全局API？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、Vue-directive自定义指令"><span class="toc-text">二、Vue.directive自定义指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、自定义指令中传递的三个参数"><span class="toc-text">三、自定义指令中传递的三个参数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、自定义指令的生命周期"><span class="toc-text">四、自定义指令的生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#五、vue-set"><span class="toc-text">五、vue.set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、Vue的生命周期（钩子函数）"><span class="toc-text">六、Vue的生命周期（钩子函数）</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、什么是全局API？"><a href="#一、什么是全局API？" class="headerlink" title="一、什么是全局API？"></a><strong>一、什么是全局API？</strong></h2><p>全局API并不在构造器里，而是先声明全局变量或者直接在Vue上定义一些新功能，Vue内置了一些全局API，在构造器外部用Vue提供给我们的API函数来定义新的功能。</p>
+<h1 id="二、Vue-directive自定义指令"><a href="#二、Vue-directive自定义指令" class="headerlink" title="二、Vue.directive自定义指令"></a>二、Vue.directive自定义指令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Vue.directive(&apos;wzq&apos;,&#123;</span><br><span class="line">           bind:function(el,binding,vnode)&#123;//被绑定</span><br><span class="line">               el.style=&apos;color:&apos;+binding.value;</span><br><span class="line">           &#125;,</span><br><span class="line">           inserted:function()&#123;//绑定到节点</span><br><span class="line">               console.log(&apos;2 - inserted&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           update:function()&#123;//组件更新</span><br><span class="line">               console.log(&apos;3 - update&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           componentUpdated:function()&#123;//组件更新完成</span><br><span class="line">               console.log(&apos;4 - componentUpdated&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           unbind:function()&#123;//解绑</span><br><span class="line">               console.log(&apos;5 - unbind&apos;);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>接触绑定</p>
+<pre><code>function unbind(){
+          app.$destroy();
+      }</code></pre><h1 id="三、自定义指令中传递的三个参数"><a href="#三、自定义指令中传递的三个参数" class="headerlink" title="三、自定义指令中传递的三个参数"></a><em>三、自定义指令中传递的三个参数</em></h1><p>el: 指令所绑定的元素，可以用来直接操作DOM。<br>binding: 一个对象，包含指令的很多信息。<br>vnode: Vue编译生成的虚拟节点。</p>
+<h1 id="四、自定义指令的生命周期"><a href="#四、自定义指令的生命周期" class="headerlink" title="四、自定义指令的生命周期"></a>四、自定义指令的生命周期</h1><p>自定义指令有五个生命周期（也叫钩子函数），分别是 bind,inserted,update,componentUpdated,unbind</p>
+<ol>
+<li>bind:只调用一次，指令第一次绑定到元素时调用，用这个钩子函数可以定义一个绑定时执行一次的初始化动作。</li>
+<li>inserted:被绑定元素插入父节点时调用（父节点存在即可调用，不必存在于document中）。</li>
+<li>.update:被绑定于元素所在的模板更新时调用，而无论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新。</li>
+<li>componentUpdated:被绑定元素所在模板完成一次更新周期时调用。 </li>
+<li>unbind:只调用一次，指令与元素解绑时调用。</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190722232232143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>代码初次加载时执行元素绑定以及节点绑定<br><img src="https://img-blog.csdnimg.cn/20190722232606661.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击加后执行更新及更新后<br><img src="https://img-blog.csdnimg.cn/20190722232645678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>点击接触按钮，彻底销毁dom.销毁后整个dom绑定全部解除。</p>
+<h2 id="五、vue-set"><a href="#五、vue-set" class="headerlink" title="五、vue.set"></a>五、vue.set</h2><p>1.作用<br>Vue.set 的作用就是在构造器外部操作构造器内部的数据、属性或者方法。</p>
+<ol start="2">
+<li><p>外部数据：不在Vue构造器里里的data处声明，而是在构造器外部声明，然后在data处引用</p>
+</li>
+<li><p>改变外部数据的三种方法：</p>
+</li>
+<li><p>1、用Vue.set改变     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function add()&#123;</span><br><span class="line">       Vue.set(outData,&apos;count&apos;,4);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、用Vue对象的方法添加     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.count++;</span><br></pre></td></tr></table></figure>
+
+<p>3、直接操作外部数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outData.count++;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>5.使用vue.set的原因<br>由于Javascript的限制，Vue不能自动检测以下变动的数组。所以在业务逻辑 需要用到数组的时候，要通过用Vue.set(app.arr,1,’ddd’)来设置改变，vue才会给我们自动更新.</p>
+<h2 id="六、Vue的生命周期（钩子函数）"><a href="#六、Vue的生命周期（钩子函数）" class="headerlink" title="六、Vue的生命周期（钩子函数）"></a>六、Vue的生命周期（钩子函数）</h2><p>这是官网的生命周期图，可以清晰明确的看到代码执行的各个阶段。<br><img src="https://img-blog.csdnimg.cn/20190723080010443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>我们可以根据需求在不同的阶段进行不同的操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">beforeCreate:function()&#123;</span><br><span class="line">               console.log(&apos;1-beforeCreate 初始化之后&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           created:function()&#123;</span><br><span class="line">               console.log(&apos;2-created 创建完成&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           beforeMount:function()&#123;</span><br><span class="line">               console.log(&apos;3-beforeMount 挂载之前&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           mounted:function()&#123;</span><br><span class="line">               console.log(&apos;4-mounted 被创建&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           beforeUpdate:function()&#123;</span><br><span class="line">               console.log(&apos;5-beforeUpdate 数据更新前&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           updated:function()&#123;</span><br><span class="line">               console.log(&apos;6-updated 被更新后&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           activated:function()&#123;</span><br><span class="line">               console.log(&apos;7-activated&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           deactivated:function()&#123;</span><br><span class="line">               console.log(&apos;8-deactivated&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           beforeDestroy:function()&#123;</span><br><span class="line">               console.log(&apos;9-beforeDestroy 销毁之前&apos;);</span><br><span class="line">           &#125;,</span><br><span class="line">           destroyed:function()&#123;</span><br><span class="line">               console.log(&apos;10-destroyed 销毁之后&apos;)</span><br><span class="line">           &#125;</span><br></pre></td></tr></table></figure>
+
+<p>不同阶段使用的函数。<br>7.template模板制作<br>    1.在构造器的template模板中编写</p>
+<p>这种写法适合简单的提示，不适合大量的html代码的编写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var app=new Vue(&#123;</span><br><span class="line">     el:&apos;#app&apos;,</span><br><span class="line">     data:&#123;</span><br><span class="line">         message:&apos;hello&apos;</span><br><span class="line">      &#125;,</span><br><span class="line">     template:`</span><br><span class="line">        &lt;p&gt;选项模板&lt;/p&gt;</span><br><span class="line">     `</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>2.写在template标签里的模板<br>    标签中使用模板 template标签给定一个id，template：“id”。适用于大量的代码，直接挂载后就可以使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;template id=&quot;aaa&quot;&gt;</span><br><span class="line">            &lt;p&gt;标签模板&lt;/p&gt;</span><br><span class="line">   &lt;/template&gt;</span><br><span class="line"></span><br><span class="line">   &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">       var app=new Vue(&#123;</span><br><span class="line">           el:&apos;#app&apos;,</span><br><span class="line">           data:&#123;</span><br><span class="line">               message:&apos;hello&apos;</span><br><span class="line">           &#125;,</span><br><span class="line">           template:&apos;#aaa&apos;</span><br><span class="line">       &#125;)</span><br><span class="line">   &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3.写在script标签里的模板</p>
+<p> <strong><em>script标签 类型是x-template</em></strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;x-template&quot; id=&quot;bbb&quot;&gt;</span><br><span class="line">        &lt;p&gt;script标签模板&lt;/p&gt;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">        var app=new Vue(&#123;</span><br><span class="line">            el:&apos;#app&apos;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                message:&apos;hello&apos;</span><br><span class="line">            &#125;,</span><br><span class="line">            template:&apos;#bbb&apos;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+       
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>VUE全局API</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王志强">王志强</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-10-10, 12:20:34</p>
+    <p><span class="copy-title">最后更新:</span>2018-10-10, 12:20:34</p>
+    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/10/vue全局API/" title="VUE全局API">http://yoursite.com/2018/10/10/vue全局API/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p> -->
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2017-2019 wzq</p>
+<!-- <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p> -->
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': [],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
