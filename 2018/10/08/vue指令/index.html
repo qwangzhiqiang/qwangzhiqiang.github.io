@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>个人博客</title>
+  <title>VUE基本指令 | 个人博客</title>
   <meta name="keywords" content>
-  <meta name="description" content="个人博客">
+  <meta name="description" content="VUE基本指令 | 个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简历王志强，本科毕业，目前从事PHP及相关工作。工作中用到的主要技术栈有：thinkphp5、mysql、apachejquery、bootstrap、vuegit、svn 主要工作企业建站、移动端app开发、公众号开发、小程序开发">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -277,12 +277,49 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-vue指令" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于我"><span class="toc-text">关于我</span></a></li></ol>
+        <h1 class="article-title">VUE基本指令</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="VUE">VUE</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2018-10-08 08:20:10'>2018-10-08 08:20</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
     
 <style>
     .left-col .switch-btn,
@@ -295,18 +332,80 @@
     }
 </style>
 </div>
-            <h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>“博客”（Blog或Weblog）一词源于“Web Log（网络日志）”的缩写，是一种十分简易的傻瓜化个人信息发布方式。让任何人都可以像免费电子邮件的注册、写作和发送一样，完成个人网页的创建、发布和更新。如果把论坛（BBS）比喻为开放的广场，那么博客就是你的开放的私人房间。可以充分利用超文本链接、网络互动、动态更新的特点，在你“不停息的网上航行”中，精选并链接全球互联网中最有价值的信息、知识与资源；也可以将你个人工作过程、生活故事、思想历程、闪现的灵感等及时记录和发布，发挥您个人无限的表达力；更可以以文会友，结识和汇聚朋友，进行深度交流沟通。</p>
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>qq:1121821488  </p>
-<p>email:<a href="mailto:1121821488@qq.com">1121821488@qq.com</a>  </p>
-<p>有任何关于技术的疑问，可以提出来大家共同学习。  </p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><em>1.v-if、v-else与v-show</em></strong></p>
+<ul>
+<li>1.1 v-if与v-else<br>v-if用来判断是否加载html的DOM。在data里面定义一个值，当这个值为真时，显示内容，否则不显示<br><img src="https://img-blog.csdnimg.cn/20190719192142789.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190719192207879.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;Two&quot;&gt;</span><br><span class="line">     &lt;div v-if=&quot;isLogin&quot;&gt;hello world&lt;/div&gt;</span><br><span class="line">      &lt;div v-else&gt;请登录后操作&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      isLogin:true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-        </article>
-        
-        <p>
-            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+<ul>
+<li>1.2 v-show<br>   通过调整css中display属性来实现内容是否展示，实际内容已经加载。<br>   <img src="https://img-blog.csdnimg.cn/20190719192316220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>1-3 v-if与v-show的区别<pre><code>  v-if： 判断是否加载，可以减轻服务器的压力，在需要时加载。
+v-show：调整css dispaly属性，可以使客户端操作更加流畅。 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190719192417843.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70)
+条件不成立的不加载
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190719192511118.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70)
+加载后通过css隐藏</code></pre><strong><em>2.v-for</em></strong></li>
+<li>2.1 v-for<br> v-for指令是循环渲染一组data中的数组，v-for 指令需要以 item in items 形式的特殊语法，items  是数据数组并且item是数组元素迭代的别名。<br> <img src="https://img-blog.csdnimg.cn/20190719192701166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>2.2 v-for排序<br>通过v-for将循环出来的数据按照一定的规则进行排序。<br><img src="https://img-blog.csdnimg.cn/20190719192817322.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>排序过程中由于js机制，需要自己写一个方法来进行数据判断，实现数据从小到大排序。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function sortNumber(a,b)&#123;</span><br><span class="line">            return a-b</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190719193455596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br> 可以实现数据的正常排序。</p>
+<ul>
+<li>2.3 循环输出对象<br>通过v-for循环数据，将循环出来的对象按属性进行输出。<br><img src="https://img-blog.csdnimg.cn/2019071919451226.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong><em>3.v-text与v-html</em></strong><br>通过data将值赋给页面进行渲染，当网速慢或者是js加载错误时会出现页面属性直接渲染的情况，用户体验不友好。</li>
+<li>3.1 v-text<br>双大括号会将数据解释为纯文本，而非HTML。为了输出真正的HTML，你就需要使用v-html 指令。 需要注意的是：在生产环境中动态渲染HTML是非常危险的，因为容易导致XSS攻击。所以只能在可信的内容上使用v-html，永远不要在用户提交和可操作的网页上使用。</li>
+<li>3.2 v-html<br>在javascript中写有html标签，用v-text是输出不出来的，需要用v-html标签来输出。<br><strong><em>4.v-on</em></strong><br>v-on 就是监听事件，可以用v-on指令监听DOM事件来触发一些javascript代码。可以用@代替，例如@click.<br><img src="https://img-blog.csdnimg.cn/20190719195227281.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>实现简单的自增、自减</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;Two&quot;&gt;       </span><br><span class="line">       &#123;&#123;count&#125;&#125;&lt;br/&gt;</span><br><span class="line">       &lt;button v-on:click=&quot;jiafen&quot;&gt;加1&lt;/button&gt;</span><br><span class="line">       &lt;button v-on:click=&quot;jianfen&quot;&gt;减1&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      count:1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line">                jiafen:function()&#123;</span><br><span class="line">                    this.count++;</span><br><span class="line">                &#125;,</span><br><span class="line">                jianfen:function()&#123;</span><br><span class="line">                    count--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>5.v-model</em></strong><br>v-model指令，绑定数据。主要是将数据绑定在特定的表单元素上，实现双向数据绑定。<br><img src="https://img-blog.csdnimg.cn/20190719195452331.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;Two&quot;&gt;       </span><br><span class="line">    &lt;p&gt;原始文本信息：&#123;&#123;message&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;h3&gt;文本框&lt;/h3&gt;</span><br><span class="line">    &lt;p&gt;v-model:&lt;input type=&quot;text&quot; v-model=&quot;message&quot;&gt;&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">       message:&apos;hello Vue!&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>v-model.lazy 数据绑定懒加载 焦点离开文本框是渲染<br>v-model.number 内容必须是数字，别的内容不会进行数据渲染（如果开始输入的是字符串则不起作用）<br>v-model.trim  去掉空格 将数据绑定中的空格全部清除。</strong><br><strong><em>6.v-bind</em></strong><br>v-bind是用来改变HTML中的标签属性来实现不同的业务逻辑。简写：，例如：href<br><img src="https://img-blog.csdnimg.cn/20190719195732150.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt><br><strong><em>7.v-pre &amp; v-cloak &amp; v-once</em></strong></p>
+<ul>
+<li><p>7.1 v-pre<br>在模板中跳过vue的编译，直接输出原始值。就是在标签中加入v-pre就不会输出vue中的data值了<br><img src="https://img-blog.csdnimg.cn/20190719195917401.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt><br>不进行vue数据渲染</p>
+</li>
+<li><p>7.2 v-cloak<br>在vue渲染完指定的整个DOM后才进行显示。它必须和CSS样式一起使用</p>
+</li>
+<li><p>7.3 v-once<br>在第一次DOM时进行渲染，渲染完成后视为静态内容，跳出以后的渲染过程。<br><img src="https://img-blog.csdnimg.cn/20190719200050114.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt><br>只执行一次，不进行数据更新。</p>
+</li>
+</ul>
+
+      
+       
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>VUE基本指令</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王志强">王志强</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-10-08, 08:20:10</p>
+    <p><span class="copy-title">最后更新:</span>2018-10-08, 08:20:10</p>
+    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/08/vue指令/" title="VUE基本指令">http://yoursite.com/2018/10/08/vue指令/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p> -->
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2017-2019 wzq</p>

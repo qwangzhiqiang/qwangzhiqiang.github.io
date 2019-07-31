@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>个人博客</title>
+  <title>Mpdf的使用 | 个人博客</title>
   <meta name="keywords" content>
-  <meta name="description" content="个人博客">
+  <meta name="description" content="Mpdf的使用 | 个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简历王志强，本科毕业，目前从事PHP及相关工作。工作中用到的主要技术栈有：thinkphp5、mysql、apachejquery、bootstrap、vuegit、svn 主要工作企业建站、移动端app开发、公众号开发、小程序开发">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -277,12 +277,49 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-mpdf" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于我"><span class="toc-text">关于我</span></a></li></ol>
+        <h1 class="article-title">Mpdf的使用</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="PHP扩展">PHP扩展</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2018-10-09 18:35:38'>2018-10-09 18:35</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        
     
 <style>
     .left-col .switch-btn,
@@ -295,18 +332,48 @@
     }
 </style>
 </div>
-            <h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>“博客”（Blog或Weblog）一词源于“Web Log（网络日志）”的缩写，是一种十分简易的傻瓜化个人信息发布方式。让任何人都可以像免费电子邮件的注册、写作和发送一样，完成个人网页的创建、发布和更新。如果把论坛（BBS）比喻为开放的广场，那么博客就是你的开放的私人房间。可以充分利用超文本链接、网络互动、动态更新的特点，在你“不停息的网上航行”中，精选并链接全球互联网中最有价值的信息、知识与资源；也可以将你个人工作过程、生活故事、思想历程、闪现的灵感等及时记录和发布，发挥您个人无限的表达力；更可以以文会友，结识和汇聚朋友，进行深度交流沟通。</p>
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>qq:1121821488  </p>
-<p>email:<a href="mailto:1121821488@qq.com">1121821488@qq.com</a>  </p>
-<p>有任何关于技术的疑问，可以提出来大家共同学习。  </p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.什么是mpdf<br>mPDF是一个PHP类库，它由UTF-8编码的HTML生成PDF文件。它基于FPDF和HTML2FPDF ，再此基础上添加了许多功能。同时对css支持能力得到了大的提升，支持css样式的引入。<br>2.安装<br>通过官方composer下载类库包<br>直接在项目文件中运行命令来下载<br>$ composer require mpdf/mpdf<img src="https://img-blog.csdnimg.cn/20190710083738354.png" alt="在这里插入图片描述"><br>下载完成后在vendor文件夹中回出现mpdf这个文件夹<br><img src="https://img-blog.csdnimg.cn/20190710083903662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>为了防止生成的文件出现乱码需要修改配置文件，在src下的config中找到configvariables,<br>将<br>autoLangToFont<br>autoScriptToLang<br>这两项都设置为true<br><img src="https://img-blog.csdnimg.cn/20190710084147573.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3.使用<br>首先在控制器中引入mpdf这个类，然后将该类实例化<br><img src="https://img-blog.csdnimg.cn/20190710084702229.png" alt="在这里插入图片描述"><br>引入mpdf类<br><img src="https://img-blog.csdnimg.cn/20190710084755816.png" alt="在这里插入图片描述"><br>实例化mpdf这个类<br> $mpdf = new Mpdf\Mpdf([‘utf-8’, ‘A4’, 16, ‘’, 10, 10, 15, 15]);<br>实例化类传入的参数是一个数组 参数内容分别是[‘编码规则’,’纸张大小（默认是竖版，可以设置为A4-L变成横板）’,’纸张国际标准多少开’,’字体’,’左边距’,’右边距’,’上边距’,’下边距’,]<br>页脚页码设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$footer = &apos;</span><br><span class="line">&lt;table class=&quot;footer&quot;&gt;&lt;tr&gt;</span><br><span class="line">   &lt;td width=&quot;65%&quot;&gt;&lt;/td&gt;</span><br><span class="line">   &lt;td width=&quot;35%&quot;&gt;第 &#123;PAGENO&#125; 页&lt;/td&gt;&apos;.&apos;&lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line">&apos;</span><br></pre></td></tr></table></figure>
 
-        </article>
-        
-        <p>
-            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+<p>首先设置页码，然后再通过  $mpdf-&gt;SetFooter($footer); 将页码设置到生成的文件上<br>css外联样式的引入<br><img src="https://img-blog.csdnimg.cn/20190710090025539.png" alt="在这里插入图片描述"><br>通过外联将样式引入，然后将模型设置成1，表名这是样式，不需要输出，下图是模型数值代表的含义。<br><img src="https://img-blog.csdnimg.cn/20190710090632291.png" alt="在这里插入图片描述"><br>输出pdf文件（必须写exit结束,否则会出现下载正常，预览全部乱码问题）<br><img src="https://img-blog.csdnimg.cn/20190710090733301.png" alt="在这里插入图片描述"><br>其中I 是预览  D是下载   F 生成后保存到服务器 S 返回字符串，此模式下$filename会被忽视<br>水印设置<br>//文字水印<br>$mpdf-&gt;SetWatermarkText(‘xxx’,0.5);//参数一是文字，参数二是透明度<br>$mpdf-&gt;showWatermarkText = true；<br>$mpdf-&gt;SetWatermarkImage(图片路径，0.5);//参数一是图片的位置，参数二是透明度<br>$mpdf-&gt;showWatermarkImage = true;<br>封面设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$header =</span><br><span class="line">            &apos;&lt;pagefooter name=&quot;myFooter&quot; content-right=&quot;&#123;PAGENO&#125;&quot; &apos;</span><br><span class="line">            . &apos;footer-style=&quot;font-family:sans-serif; font-size:8pt; font-weight:normal; color:#880000;&quot;&apos;</span><br><span class="line">            . &apos; footer-style-left=&quot;&quot; line=&quot;on&quot; /&gt;&apos;.</span><br><span class="line">//封面内容</span><br><span class="line">            &apos;</span><br><span class="line">            &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</span><br><span class="line">            &lt;h1 align=&quot;center&quot; style=&quot;font-size: 50pt;font-family:serif;font-weight: bold&quot;&gt;检     验     报     告   &lt;/h1&gt;</span><br><span class="line">            &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;h2 align=&quot;right&quot;&gt;No:132456&lt;/h2&gt;</span><br><span class="line">            &lt;br&gt;&lt;br&gt;</span><br><span class="line">            &lt;h1 align=&quot;center&quot;&gt;样品名称:&lt;/h1&gt;&lt;br&gt;</span><br><span class="line">            &lt;h1 align=&quot;center&quot;&gt;样品规格或等级:&lt;/h1&gt;&lt;br&gt;</span><br><span class="line">            &lt;h1 align=&quot;center&quot;&gt;委托单位:&lt;/h1&gt;&lt;br&gt;</span><br><span class="line">            &lt;h1 align=&quot;center&quot;&gt;委托类别:&lt;/h1&gt;&lt;br&gt;</span><br><span class="line">            &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</span><br><span class="line">            &lt;h2 align=&quot;center&quot;&gt;中国日用化学工业研究院分析检测中心&lt;/h2&gt;&lt;br&gt;</span><br><span class="line">            &lt;h2 align=&quot;center&quot;&gt;国家洗涤用品质量监督检验中心（太原）&lt;/h2&gt;&lt;br&gt;</span><br><span class="line">            &lt;h2 align=&quot;center&quot;&gt;&apos;.date(&quot;Y-m-d&quot;)</span><br><span class="line">//关键代码，关联上面的&lt;pageheader&gt;代码，使页眉，页脚和目录生成，具体的功能，其实看字段也能猜测出，或者尝试该值看效果。这里奇偶也的页眉页脚相同，根据需求可以设置为不同的格式。</span><br><span class="line">            .&apos;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>内容设置<br> $content = ‘直接放需要生成的页面’<br> 然后拼接 $html = $header.$content;<br> 输出<br> $mpdf-&gt;WriteHTML($html);<br>        $mpdf-&gt;Output(‘委托书.pdf’,”I”);<br>        exit;</p>
+
+      
+       
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>Mpdf的使用</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王志强">王志强</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-10-09, 18:35:38</p>
+    <p><span class="copy-title">最后更新:</span>2018-10-09, 18:35:38</p>
+    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/09/mpdf/" title="Mpdf的使用">http://yoursite.com/2018/10/09/mpdf/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p> -->
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2017-2019 wzq</p>

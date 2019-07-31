@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>个人博客</title>
+  <title>VUE-Cli脚手架结构解析 | 个人博客</title>
   <meta name="keywords" content>
-  <meta name="description" content="个人博客">
+  <meta name="description" content="VUE-Cli脚手架结构解析 | 个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简历王志强，本科毕业，目前从事PHP及相关工作。工作中用到的主要技术栈有：thinkphp5、mysql、apachejquery、bootstrap、vuegit、svn 主要工作企业建站、移动端app开发、公众号开发、小程序开发">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -277,12 +277,49 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-Vue—cli脚手架结构解析" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于我"><span class="toc-text">关于我</span></a></li></ol>
+        <h1 class="article-title">VUE-Cli脚手架结构解析</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="VUE">VUE</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2018-10-14 18:48:38'>2018-10-14 18:48</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-项目整体结构分析"><span class="toc-text">1.项目整体结构分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-开发中常用的配置"><span class="toc-text">2.开发中常用的配置</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -295,18 +332,45 @@
     }
 </style>
 </div>
-            <h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>“博客”（Blog或Weblog）一词源于“Web Log（网络日志）”的缩写，是一种十分简易的傻瓜化个人信息发布方式。让任何人都可以像免费电子邮件的注册、写作和发送一样，完成个人网页的创建、发布和更新。如果把论坛（BBS）比喻为开放的广场，那么博客就是你的开放的私人房间。可以充分利用超文本链接、网络互动、动态更新的特点，在你“不停息的网上航行”中，精选并链接全球互联网中最有价值的信息、知识与资源；也可以将你个人工作过程、生活故事、思想历程、闪现的灵感等及时记录和发布，发挥您个人无限的表达力；更可以以文会友，结识和汇聚朋友，进行深度交流沟通。</p>
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>qq:1121821488  </p>
-<p>email:<a href="mailto:1121821488@qq.com">1121821488@qq.com</a>  </p>
-<p>有任何关于技术的疑问，可以提出来大家共同学习。  </p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-项目整体结构分析"><a href="#1-项目整体结构分析" class="headerlink" title="1.项目整体结构分析"></a>1.项目整体结构分析</h2><p>PS：由于版本不断更新以及你选择安装的不同会导致结构不同，这里以3.9.2版本的脚手架为例。<br><strong>如何查看自己脚手架版本</strong><br>安装好脚手架后进行项目初始化，然后在项目目录文件下通过vue -V命令查看自己的脚手架版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">|-- build                            // 项目构建(webpack)相关代码</span><br><span class="line">|   |-- build.js                     // 生产环境构建代码</span><br><span class="line">|   |-- check-version.js             // 检查node、npm等版本</span><br><span class="line">|   |-- utils.js                     // 构建工具相关</span><br><span class="line">|   |--vue-loader.conf.js        	 //处理.vue文件的配置文件</span><br><span class="line">|   |-- webpack.base.conf.js         // webpack基础配置</span><br><span class="line">|   |-- webpack.dev.conf.js          // webpack开发环境配置</span><br><span class="line">|   |-- webpack.prod.conf.js         // webpack生产环境配置</span><br><span class="line">|-- config                           // 项目开发环境配置</span><br><span class="line">|   |-- dev.env.js                   // 开发环境变量</span><br><span class="line">|   |-- index.js                     // 项目一些配置变量</span><br><span class="line">|   |-- prod.env.js                  // 生产环境变量</span><br><span class="line">|   |-- test.env.js                  // 测试环境变量</span><br><span class="line">|-- node_modules              // 开发过程中下载的包（根据开发情况实际添加，不做太多解释。）</span><br><span class="line">|-- src                              // 源码目录</span><br><span class="line">|   |-- assets                     // 项目的静态资源</span><br><span class="line">|   |-- components                     // vue公共组件</span><br><span class="line">|   |-- router                  // vue路由模块</span><br><span class="line">|   |-- store                          // vuex的状态管理</span><br><span class="line">|   |-- App.vue                        // 页面入口文件</span><br><span class="line">|   |-- main.js                        // 程序入口文件，加载各种公共组件</span><br><span class="line">|-- .babelrc                         // ES6语法编译配置</span><br><span class="line">|-- .editorconfig                    // 定义代码格式</span><br><span class="line">|-- .gitignore                       // git上传需要忽略的文件格式</span><br><span class="line">|-- README.md                        // 项目说明</span><br><span class="line">|-- favicon.ico                        //项目标志</span><br><span class="line">|-- index.html                       // 入口页面</span><br><span class="line">|-- package.json                     // 项目基本信息</span><br><span class="line">|-- postcssrc.js                    // 处理不同浏览器兼容css</span><br></pre></td></tr></table></figure>
 
-        </article>
-        
-        <p>
-            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+<h2 id="2-开发中常用的配置"><a href="#2-开发中常用的配置" class="headerlink" title="2.开发中常用的配置"></a>2.开发中常用的配置</h2><p>局域网访问<br>可以修改ip地址、端口号。<br>在config文件夹中找到host、port修改。<br><img src="https://img-blog.csdnimg.cn/20190726164920832.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>跨域问题<br>在config文件夹下的index.js中找到proxyTable 在这个数组中进行对应的设置。并分别在开发环境和正式环境进行对应的配置分别为dev.env.js与prod.env.js这俩个文件。<br><img src="https://img-blog.csdnimg.cn/20190726165239528.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190726165802788.png" alt="在这里插入图片描述"></p>
+
+      
+       
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>VUE-Cli脚手架结构解析</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王志强">王志强</a></p>
+    <p><span class="copy-title">发布时间:</span>2018-10-14, 18:48:38</p>
+    <p><span class="copy-title">最后更新:</span>2018-10-14, 18:48:38</p>
+    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/14/Vue—cli脚手架结构解析/" title="VUE-Cli脚手架结构解析">http://yoursite.com/2018/10/14/Vue—cli脚手架结构解析/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p> -->
+</div>
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2017-2019 wzq</p>
