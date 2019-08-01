@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>MySQL基本指令 | 个人博客</title>
+  <title>git版本同步 | 个人博客</title>
   <meta name="keywords" content>
-  <meta name="description" content="MySQL基本指令 | 个人博客">
+  <meta name="description" content="git版本同步 | 个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简历王志强，本科毕业，目前从事PHP及相关工作。工作中用到的主要技术栈有：thinkphp5、mysql、apachejquery、bootstrap、vuegit、svn 主要工作企业建站、移动端app开发、公众号开发、小程序开发">
 <meta property="og:type" content="website">
@@ -327,9 +327,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-mysql指令" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-git版本同步" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">MySQL基本指令</h1>
+        <h1 class="article-title">git版本同步</h1>
     
     <div class="article-meta">
         
@@ -337,7 +337,7 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="MySQL">MySQL</a>
+                <a href="javascript:" data-rel="git">git</a>
             
         </span>
         
@@ -345,7 +345,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-05 18:22:30'>2018-10-05 18:22</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-16 19:46:28'>2018-10-16 19:46</time>
         
     </div>
     <div class="article-meta">
@@ -367,7 +367,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建项目"><span class="toc-text">1.创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将创建的本地分支同步到github中"><span class="toc-text">将创建的本地分支同步到github中</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -382,7 +382,17 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、基础<br>1、说明：创建数据库<br>CREATE DATABASE database-name<br>2、说明：删除数据库<br>drop database dbname<br>3、说明：备份sql server<br>— 创建 备份数据的 device<br>USE master<br>EXEC sp_addumpdevice ‘disk’, ‘testBack’, ‘c:\mssql7backup\MyNwind_1.dat’<br>— 开始 备份<br>BACKUP DATABASE pubs TO testBack<br>4、说明：创建新表<br>create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)<br>根据已有的表创建新表：<br>A：create table tab_new like tab_old (使用旧表创建新表)<br>B：create table tab_new as select col1,col2… from tab_old definition only<br>5、说明：删除新表<br>drop table tabname<br>6、说明：增加一个列<br>Alter table tabname add column col type<br>注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。<br>7、说明：添加主键： Alter table tabname add primary key(col)<br>说明：删除主键： Alter table tabname drop primary key(col)<br>8、说明：创建索引：create [unique] index idxname on tabname(col….)<br>删除索引：drop index idxname<br>注：索引是不可更改的，想更改必须删除重新建。<br>9、说明：创建视图：create view viewname as select statement<br>删除视图：drop view viewname<br>10、说明：几个简单的基本的sql语句<br>选择：select * from table1 where 范围<br>插入：insert into table1(field1,field2) values(value1,value2)<br>删除：delete from table1 where 范围<br>更新：update table1 set field1=value1 where 范围<br>查找：select * from table1 where field1 like ’%value1%’ —like的语法很精妙，查资料!<br>排序：select * from table1 order by field1,field2 [desc]<br>总数：select count as totalcount from table1<br>求和：select sum(field1) as sumvalue from table1<br>平均：select avg(field1) as avgvalue from table1<br>最大：select max(field1) as maxvalue from table1<br>最小：select min(field1) as minvalue from table1<br>11、说明：几个高级查询运算词<br>A： UNION 运算符<br>UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。当 ALL 随 UNION 一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。<br>B： EXCEPT 运算符<br>EXCEPT 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。<br>C： INTERSECT 运算符<br>INTERSECT 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所有重复行而派生出一个结果表。当 ALL 随 INTERSECT 一起使用时 (INTERSECT ALL)，不消除重复行。<br>注：使用运算词的几个查询结果行必须是一致的。<br>12、说明：使用外连接<br>A、left （outer） join：<br>左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。<br>SQL: select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c<br>B：right （outer） join:<br>右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。<br>C：full/cross （outer） join：<br>全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。<br>12、分组:Group by:<br>一张表，一旦分组完成后，查询后只能得到组相关的信息。<br>组相关的信息：（统计信息） count,sum,max,min,avg  分组的标准)<br>在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据<br>在selecte统计函数中的字段，不能和普通的字段放在一起；<br>13、对数据库进行操作：<br>分离数据库： sp_detach_db; 附加数据库：sp_attach_db 后接表明，附加需要完整的路径名<br>14.如何修改数据库的名称:<br>sp_renamedb ‘old_name’, ‘new_name’</p>
+        <h2 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h2><ol>
+<li><p>首先创建一个空文件夹或者当前项目的文件夹中在该文件夹中初始化git命令git init<br>git init<br>Initialized empty Git repository in C:/Users/Administrator/Desktop/ceshi/.git/<br>通过该命令创建一个本地git仓库成功</p>
+</li>
+<li><p>将项目文件放到该文件下，通过git add 将文件添加到暂存区</p>
+<pre><code>![在这里插入图片描述](https://img-blog.csdnimg.cn/20190607232824534.png)
+提示：git add * 将该文件夹下的所有文件全部添加到暂存区 
+git add &lt;file&gt; 也可以通告该命令单独将某个文件存到暂存区</code></pre></li>
+<li><p>通过git commit 将文件提交到当前的分支下<br><img src="https://img-blog.csdnimg.cn/20190607233147520.png" alt="在这里插入图片描述"><br>简单解释一下git commit命令，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。<br>嫌麻烦不想输入-m “xxx”行不行？确实有办法可以这么干，但是强烈不建议你这么干，因为输入说明对自己对别人阅读都很重要。实在不想输入说明的童鞋请自行Google，我不告诉你这个参数。<br>git commit命令执行成功后会告诉你，1 file changed：1个文件被改动（我们新添加的123.txt文件）；2 insertions：插入了两行内容（123.txt有两行内容）。</p>
+<h2 id="将创建的本地分支同步到github中"><a href="#将创建的本地分支同步到github中" class="headerlink" title="将创建的本地分支同步到github中"></a>将创建的本地分支同步到github中</h2><p> 1.登陆github,创建一个新的仓库<a href="https://github.com" target="_blank" rel="noopener">github地址</a><br><img src="https://img-blog.csdnimg.cn/20190607234956710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190607234306779.png" alt="复制一下命令通过git来执行"><br><img src="https://img-blog.csdnimg.cn/20190607234341785.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190607234454671.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190607234522845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzNDgyMTMy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>远程连接库成功。<br>请千万注意，把上面的michaelliao替换成你自己的GitHub账户名，否则，你在本地关联的就是我的远程库，关联没有问题，但是你以后推送是推不上去的，因为你的SSH Key公钥不在我的账户列表中。<br>添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。<br>把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。<br>由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。<br>之后通过git push origin master就可以将本地提交的代码同步到github中去了。</p>
+</li>
+</ol>
 
       
        
@@ -396,12 +406,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>MySQL基本指令</p>
+    <p><span class="copy-title">文章标题:</span>git版本同步</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王志强">王志强</a></p>
-    <p><span class="copy-title">发布时间:</span>2018-10-05, 18:22:30</p>
-    <p><span class="copy-title">最后更新:</span>2018-10-05, 18:22:30</p>
-    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/05/mysql指令/" title="MySQL基本指令">http://yoursite.com/2018/10/05/mysql指令/</a>
+    <p><span class="copy-title">发布时间:</span>2018-10-16, 19:46:28</p>
+    <p><span class="copy-title">最后更新:</span>2018-10-16, 19:46:28</p>
+    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/16/git版本同步/" title="git版本同步">http://yoursite.com/2018/10/16/git版本同步/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p> -->

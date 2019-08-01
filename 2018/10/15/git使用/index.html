@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>MySQL基本指令 | 个人博客</title>
+  <title>git使用 | 个人博客</title>
   <meta name="keywords" content>
-  <meta name="description" content="MySQL基本指令 | 个人博客">
+  <meta name="description" content="git使用 | 个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简历王志强，本科毕业，目前从事PHP及相关工作。工作中用到的主要技术栈有：thinkphp5、mysql、apachejquery、bootstrap、vuegit、svn 主要工作企业建站、移动端app开发、公众号开发、小程序开发">
 <meta property="og:type" content="website">
@@ -327,9 +327,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-mysql指令" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-git使用" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">MySQL基本指令</h1>
+        <h1 class="article-title">git使用</h1>
     
     <div class="article-meta">
         
@@ -337,7 +337,7 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="MySQL">MySQL</a>
+                <a href="javascript:" data-rel="git">git</a>
             
         </span>
         
@@ -345,7 +345,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-10-05 18:22:30'>2018-10-05 18:22</time>
+        创建时间:<time class="date" title='更新时间: 2018-10-15 19:20:13'>2018-10-15 19:20</time>
         
     </div>
     <div class="article-meta">
@@ -382,7 +382,24 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、基础<br>1、说明：创建数据库<br>CREATE DATABASE database-name<br>2、说明：删除数据库<br>drop database dbname<br>3、说明：备份sql server<br>— 创建 备份数据的 device<br>USE master<br>EXEC sp_addumpdevice ‘disk’, ‘testBack’, ‘c:\mssql7backup\MyNwind_1.dat’<br>— 开始 备份<br>BACKUP DATABASE pubs TO testBack<br>4、说明：创建新表<br>create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)<br>根据已有的表创建新表：<br>A：create table tab_new like tab_old (使用旧表创建新表)<br>B：create table tab_new as select col1,col2… from tab_old definition only<br>5、说明：删除新表<br>drop table tabname<br>6、说明：增加一个列<br>Alter table tabname add column col type<br>注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。<br>7、说明：添加主键： Alter table tabname add primary key(col)<br>说明：删除主键： Alter table tabname drop primary key(col)<br>8、说明：创建索引：create [unique] index idxname on tabname(col….)<br>删除索引：drop index idxname<br>注：索引是不可更改的，想更改必须删除重新建。<br>9、说明：创建视图：create view viewname as select statement<br>删除视图：drop view viewname<br>10、说明：几个简单的基本的sql语句<br>选择：select * from table1 where 范围<br>插入：insert into table1(field1,field2) values(value1,value2)<br>删除：delete from table1 where 范围<br>更新：update table1 set field1=value1 where 范围<br>查找：select * from table1 where field1 like ’%value1%’ —like的语法很精妙，查资料!<br>排序：select * from table1 order by field1,field2 [desc]<br>总数：select count as totalcount from table1<br>求和：select sum(field1) as sumvalue from table1<br>平均：select avg(field1) as avgvalue from table1<br>最大：select max(field1) as maxvalue from table1<br>最小：select min(field1) as minvalue from table1<br>11、说明：几个高级查询运算词<br>A： UNION 运算符<br>UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。当 ALL 随 UNION 一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。<br>B： EXCEPT 运算符<br>EXCEPT 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。<br>C： INTERSECT 运算符<br>INTERSECT 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所有重复行而派生出一个结果表。当 ALL 随 INTERSECT 一起使用时 (INTERSECT ALL)，不消除重复行。<br>注：使用运算词的几个查询结果行必须是一致的。<br>12、说明：使用外连接<br>A、left （outer） join：<br>左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。<br>SQL: select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c<br>B：right （outer） join:<br>右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。<br>C：full/cross （outer） join：<br>全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。<br>12、分组:Group by:<br>一张表，一旦分组完成后，查询后只能得到组相关的信息。<br>组相关的信息：（统计信息） count,sum,max,min,avg  分组的标准)<br>在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据<br>在selecte统计函数中的字段，不能和普通的字段放在一起；<br>13、对数据库进行操作：<br>分离数据库： sp_detach_db; 附加数据库：sp_attach_db 后接表明，附加需要完整的路径名<br>14.如何修改数据库的名称:<br>sp_renamedb ‘old_name’, ‘new_name’</p>
+        <p>一、版本控制<br>版本控制是一种用来记录一个或若干文件内容的变化，以便将来可以查阅特定版本修订情况的系统。<br>在本教程所展示的例子中，我们对保存着软件源代码的文件作版本控制，但实际上，你可以对任何类型的文件进行版本控制。</p>
+<ol>
+<li>本地版本控制系统<br>将项目代码拷贝的方式来保存不同的版本，或许还会改名加上备份时间以示区别。 这么做唯一的好处就是简单，但是特别容易犯错。<br>为了解决这个问题，人们很久以前就开发了许多种本地版本控制系统，大多都是采用某种简单的数据库来记录文件的历次更新差异。<br>其中现在大部分人用的是svn或者git</li>
+<li>Git介绍<br>Linux 内核开源项目有着为数众广的参与者。<br>他们对新的系统制订了若干目标：<br>速度<br>简单的设计<br>对非线性开发模式的强力支持（允许成千上万个并行开发的分支）<br>完全分布式<br>有能力高效管理类似 Linux 内核一样的超大规模项目（速度和数据量）<br>自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。<br>它的速度飞快，极其适合管理大项目，有着令人难以置信的非线性分支管理系统。<br>二、 Git 基础</li>
+<li>直接记录快照，而非差异比较<br>Git 和其它版本控制系统的主要差别在于 Git 对待数据的方法。<br>其它大部分系统以文件变更列表的方式存储信息。 Git 更像是把数据看作是对小型文件系统的一组快照。每次你提交更新，或在 Git 中保存项目状态时，它主要对当时的全部文件制作一个快照并保存这个快照的索引。<br>为了高效，如果文件没有修改，Git 不再重新存储该文件，而是只保留一个链接指向之前存储的文件。<br>Git 对待数据更像是一个 快照流。<br>这是 Git 与几乎所有其它版本控制系统的重要区别。Git 更像是一个小型的文件系统，提供了许多以此为基础构建的超强工具，而不只是一个简单的 VCS。</li>
+<li>近乎所有操作都是本地执行<br>在 Git 中的绝大多数操作都只需要访问本地文件和资源，一般不需要来自网络上其它计算机的信息。这也意味着你离线或者没有 VPN 时，几乎可以进行任何操作。 如你在飞机或火车上想做些工作，你能愉快地提交，直到有网络连接时再上传。 如你回家后 VPN 客户端不正常，你仍能工作。</li>
+<li>Git 保证完整性<br>Git 中所有数据在存储前都计算校验和，然后以校验和来引用。 这意味着不可能在 Git 不知情时更改任何文件内容或目录内容。 这个功能建构在 Git 底层，是构成 Git 哲学不可或缺的部分。 若你在传送过程中丢失信息或损坏文件，Git 就能发现。<br>实际上，Git 数据库中保存的信息都是以文件内容的哈希值来索引，而不是文件名。</li>
+<li>Git 一般只添加数据<br>你执行的 Git 操作，几乎只往 Git 数据库中增加数据。 很难让 Git 执行任何不可逆操作，或者让它以任何方式清除数据。<br>一旦你提交快照到 Git 中，就难以再丢失数据，特别是如果你定期的推送数据库到其它仓库的话。</li>
+<li>三种状态<br>Git 有三种状态，你的文件可能处于其中之一：<br>已修改（modified）: 表示修改了文件，但还没保存到数据库中。<br>已暂存（staged）: 表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。<br>已提交（committed）: 表示数据已经安全的保存在本地数据库中。<br>由此引入 Git 项目的三个工作区域的概念：<br>工作目录<br>暂存区域<br>Git 仓库(版本库)<br>工作区、暂存区、版本库 图解<br>工作目录是对项目的某个版本独立提取出来的内容。 这些从 Git 仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。<br>暂存区域是一个文件，保存了下次将提交的文件列表信息，一般在 Git 仓库目录中。 有时候也被称作“索引”，不过一般说法还是叫暂存区域。<br>Git 仓库目录是 Git 用来保存项目的元数据和对象数据库的地方。 这是 Git 中最重要的部分，从其它计算机克隆仓库时，拷贝的就是这里的数据。<br>基本的 Git 工作流程如下：<br>在工作目录中修改文件。<br>暂存文件，将文件的快照放入暂存区域。<br>提交更新，找到暂存区域的文件，将快照永久性存储到 Git 仓库目录。<br>如果作了修改并已放入暂存区域，就属于已暂存状态。 如果自上次取出后，作了修改但还没有放到暂存区域，就是已修改状态。如果 Git 目录中保存着的特定版本文件，就属于已提交状态。<br>三、Git安装</li>
+<li>在 Linux 上安装<br>如果你想在 Linux 上用二进制安装程序来安装 Git，可以使用发行版包含的基础软件包管理工具来安装。 如果以 Fedora 上为例，你可以使用 yum：<br><img src="https://img-blog.csdnimg.cn/20190512114247428.png" alt="Linux下安装git命令"></li>
+<li>在 Windows 上安装<br>在 Windows 上安装 Git 也有几种安装方法：<br>官方版本可以在 Git 官方网站下载。<br>打开 <a href="http://git-scm.com/download/win，下载会自动开始。" target="_blank" rel="noopener">http://git-scm.com/download/win，下载会自动开始。</a><br>另一个简单的方法是安装 GitHub for Windows。该安装程序包含图形化和命令行版本的 Git。它也能支持 Powershell，提供了稳定的凭证缓存和健全的 CRLF 设置。你可以在 GitHub for Windows 网站下载，网址为 <a href="http://windows.github.com。" target="_blank" rel="noopener">http://windows.github.com。</a><br>四、 初次运行 Git 前的配置<br>既然已经在系统上安装了 Git，你会想要做几件事来定制你的 Git 环境。 每台计算机上只需要配置一次，程序升级时会保留配置信息。 你可以在任何时候再次通过运行命令来修改它们。<br>Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为的配置变量。<br>这些变量存储在三个不同的位置：</li>
+</ol>
+<p>** /etc/gitconfig 文件<strong>: 包含系统上每一个用户及他们仓库的通用配置。如果使用带有–system选项的git config时，它会从此文件读写配置变量。<br>** ~/.gitconfig 或 ~/.config/git/config 文件</strong>：只针对当前用户。可以传递–global选项让 Git 读写此文件。<br>当前使用仓库的 Git 目录中的 config 文件（就是 .git/config ）：针对该仓库。<br>每一个级别覆盖上一级别的配置，所以 .git/config 的配置变量会覆盖 /etc/gitconfig 中的配置变量。<br>在 Windows 系统中，Git 会查找 $HOME 目录下（一般情况下是 C:\Users$USER ）的 .gitconfig 文件。Git 同样也会寻找 /etc/gitconfig 文件，但只限于 MSys 的根目录下，即安装 Git 时所选的目标位置。</p>
+<ol>
+<li>用户信息<br>当安装完 Git 应该做的第一件事就是设置你的用户名称与邮件地址。 这样做很重要，因为每一个 Git 的提交都会使用这些信息，并且它会写入到你的每一次提交中，不可更改：<br>$ git config –global user.name “John Doe”<br>$ git config –global user.email <a href="mailto:johndoe@example.com" target="_blank" rel="noopener">johndoe@example.com</a><br>再次强调，如果使用了 –global 选项，那么该命令只需要运行一次，因为之后无论你在该系统上做任何事情， Git 都会使用那些信息。 当你想针对特定项目使用不同的用户名称与邮件地址时，可以在那个项目目录下运行没有 –global 选项的命令来配置。<br>很多 GUI 工具都会在第一次运行时帮助你配置这些信息。</li>
+<li>文本编辑器<br>既然用户信息已经设置完毕，你可以配置默认文本编辑器了，当 Git 需要你输入信息时会调用它。 如果未配置，Git 会使用操作系统默认的文本编辑器，通常是 Vim。 如果你想使用不同的文本编辑器，例如 Emacs，可以这样做：<br>$ git config –global core.editor emacs<br>警告：<br>Vim 和 Emacs 是像 Linux 与 Mac 等基于 Unix 的系统上开发者经常使用的流行的文本编辑器。 如果你对这些编辑器都不是很了解或者你使用的是 Windows 系统，那么可能需要搜索如何在 Git 中配置你最常用的编辑器。 如果你不设置编辑器并且不知道 Vim 或 Emacs 是什么，当它们运行起来后你可能会被弄糊涂、不知所措。</li>
+<li>检查配置信息<br>如果想要检查你的配置，可以使用 git config –list 命令来列出所有 Git 当时能找到的配置。<br>$ git config –list<br>user.name=John Doe<br>user.email=johndoe@example.com<br>color.status=auto<br>color.branch=auto<br>color.interactive=auto<br>color.diff=auto<br>…<br>你可能会看到重复的变量名，因为 Git 会从不同的文件中读取同一个配置（例如：/etc/gitconfig 与 ~/.gitconfig）。 这种情况下，Git 会使用它找到的每一个变量的最后一个配置。<br>你可以通过输入 git config <key> ： 来检查 Git 的某一项配置<br>$ git config user.name<br>五、 获取帮助<br>若你使用 Git 时需要获取帮助，有三种方法可以找到 Git 命令的使用手册：<br>$ git help <verb><br>$ git <verb> –help<br>$ man git-<verb></verb></verb></verb></key></li>
+</ol>
 
       
        
@@ -396,12 +413,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>MySQL基本指令</p>
+    <p><span class="copy-title">文章标题:</span>git使用</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="王志强">王志强</a></p>
-    <p><span class="copy-title">发布时间:</span>2018-10-05, 18:22:30</p>
-    <p><span class="copy-title">最后更新:</span>2018-10-05, 18:22:30</p>
-    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/05/mysql指令/" title="MySQL基本指令">http://yoursite.com/2018/10/05/mysql指令/</a>
+    <p><span class="copy-title">发布时间:</span>2018-10-15, 19:20:13</p>
+    <p><span class="copy-title">最后更新:</span>2018-10-15, 19:20:13</p>
+    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/2018/10/15/git使用/" title="git使用">http://yoursite.com/2018/10/15/git使用/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p> -->
